@@ -1,0 +1,14 @@
+{
+    "name": "muhammad_nawlo/mvc",
+    "description": "This is a basic implementation of mvc design pattern",
+    "require": {
+        "vlucas/phpdotenv": "^5.5",
+        "psr/container": "^2.0",
+      "ext-pdo": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    }
+}
