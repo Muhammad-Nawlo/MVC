@@ -6,6 +6,7 @@ use app\core\model\Model;
 
 class Product extends Model
 {
+    public ?string $id = null;
     public ?string $brand = null;
     public ?string $name = null;
     public ?float $price = null;

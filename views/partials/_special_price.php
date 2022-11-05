@@ -28,7 +28,7 @@ $brands = array_unique($brands);
                 <div class="grid-item border <?= strtolower($p['brand']) ?>">
                     <div class="item py-3">
                         <div class="product text-center">
-                            <a href="product.php?id=<?= $p['id'] ?>"><img src="<?= $p['img'] ?>" alt="<?= $p['name'] ?>"
+                            <a href="/product?id=<?= $p['id'] ?>"><img src="<?= $p['img'] ?>" alt="<?= $p['name'] ?>"
                                                                           class="img-fluid"></a>
                             <h6><?= $p['name'] ?></h6>
                             <div class="text-center text-warning">

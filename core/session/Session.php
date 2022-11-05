@@ -37,7 +37,7 @@ class Session
 
     private static function format_flash_message(array $flash_message): string
     {
-        return sprintf('<div class="alert alert-%s">%s</div>',
+        return sprintf('<div class="alert alert-%s" style="position: absolute;bottom: 15px;z-index: 2;right: 15px;">%s</div>',
             $flash_message['type'],
             $flash_message['message']
         );

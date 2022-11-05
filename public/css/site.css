@@ -192,3 +192,11 @@ footer {
     color: #fff;
 }
 
+
+.product-color {
+    display: inline-block;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px
+}
+

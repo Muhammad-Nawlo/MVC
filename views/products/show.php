@@ -1,16 +1,14 @@
 <?php
 /**
- * @var $products Query
+ * @var \app\models\Product $product
  */
-$id = $_GET['id'];
-$product = $products->getData("item_id=" . $id);
 ?>
 <section class="product my-4">
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
-                <img src="<?= $product['item_image'] ?>" alt="<?= $product['item_name'] ?>" class="img-fluid">
-                <div class="row">
+                <img src="<?= $product['img'] ?>" alt="<?= $product['name'] ?>" class="img-fluid">
+                <div class="row mt-2">
                     <div class="col">
                         <button class="btn btn-danger form-control">
                             Proceed to buy
@@ -24,8 +22,8 @@ $product = $products->getData("item_id=" . $id);
                 </div>
             </div>
             <div class="col-sm-6">
-                <h5><?= $product['item_name'] ?></h5>
-                <small>By <?= $product['item_brand'] ?></small>
+                <h5><?= $product['name'] ?></h5>
+                <small>By <?= $product['brand'] ?></small>
                 <div class="d-flex">
                     <div class="text-warning me-2">
                         <span><i class="fas fa-star"></i></span>
@@ -45,7 +43,7 @@ $product = $products->getData("item_id=" . $id);
                     </tr>
                     <tr>
                         <td>Deal price:</td>
-                        <td class="text-danger">$<?= $product['item_price'] ?></td>
+                        <td class="text-danger">$<?= $product['price'] ?></td>
                     </tr>
                     <tr>
                         <td>You save:</td>
@@ -82,9 +80,25 @@ $product = $products->getData("item_id=" . $id);
                 </div>
                 <div class="phone-color d-flex align-items-center mt-2">
                     <h6 class="pe-2">Color: </h6>
-                    <div class="rounded-circle bg-primary mx-1"></div>
-                    <div class="rounded-circle bg-secondary mx-1"></div>
-                    <div class="rounded-circle bg-warning mx-1"></div>
+                    <?php foreach (explode(',', $product['color']) as $c): ?>
+                        <div class="rounded-circle mx-1" style="background-color: <?= $c; ?>"></div>
+                    <?php endforeach; ?>
+                </div>
+                <div class="mt-4">
+                    <h6>Size:</h6>
+                    <div class="d-flex justify-content-between">
+                        <?php foreach (explode(',', $product['ram']) as $r): ?>
+                            <div class="border px-3 py-2"><?= $r; ?></div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <h6>Storage:</h6>
+                    <div class="d-flex justify-content-between">
+                        <?php foreach (explode(',', $product['storage']) as $s): ?>
+                            <div class="border px-3 py-2"><?= $s; ?></div>
+                        <?php endforeach; ?>
+                    </div>
                 </div>
                 <div class="d-flex align-items-center mt-4 quantity-container">
                     <h6 class="pe-2">Quantity: </h6>
@@ -97,14 +111,7 @@ $product = $products->getData("item_id=" . $id);
                         </button>
                     </div>
                 </div>
-                <div class="mt-4">
-                    <h6>Size:</h6>
-                    <div class="d-flex justify-content-between">
-                        <div class="border px-3 py-2">4GB RAM</div>
-                        <div class="border px-3 py-2">6GB RAM</div>
-                        <div class="border px-3 py-2">8GB RAM</div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>

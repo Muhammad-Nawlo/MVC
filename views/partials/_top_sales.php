@@ -13,7 +13,7 @@
                 ?>
                 <div class="item">
                     <div class="product text-center">
-                        <a href="product.php?id=<?= $p['id'] ?>"><img src="<?= $p['img'] ?>"
+                        <a href="/product?id=<?= $p['id'] ?>"><img src="<?= $p['img'] ?>"
                                                                            alt="<?= $p['name'] ?>"
                                                                            class="img-fluid"></a>
                         <h6><?= $p['name'] ?></h6>

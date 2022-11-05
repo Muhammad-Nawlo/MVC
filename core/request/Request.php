@@ -53,7 +53,7 @@ class Request
         $body = $this->body();
         $errors = [];
         foreach ($data as $attribute => $rules) {
-            $valueOfAttr = $body[$attribute] ?? null;
+            $valueOfAttr = $body[$attribute] === '' ? null : $body[$attribute];
             $rules = explode('|', $rules);
             foreach ($rules as $rule) {
                 $min = $max = null;

@@ -5,7 +5,7 @@ use app\core\Application;
 ?>
 <nav class="navbar navbar-expand-lg navbar-dark color-second-bg">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Mobile Shop</a>
+        <a class="navbar-brand" href="/">Mobile Shop</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -13,16 +13,16 @@ use app\core\Application;
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav m-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#top-sales">Top sales</a>
+                    <a class="nav-link" href="/#top-sales">Top sales</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#special-price">Special price</a>
+                    <a class="nav-link" href="/#special-price">Special price</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#new-phones">New phones</a>
+                    <a class="nav-link" href="/#new-phones">New phones</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#latest-blog">Latest blog</a>
+                    <a class="nav-link" href="/#latest-blog">Latest blog</a>
                 </li>
             </ul>
             <?php if (!Application::isGuest()): ?>

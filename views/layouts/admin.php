@@ -19,9 +19,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
           integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="../../css/selectize.bootstrap5.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css"
+          integrity="sha512-5PV92qsds/16vyYIJo3T/As4m2d8b6oWYfoqV+vtizRB6KhF1F9kYzWzQmsO6T3z3QG2Xdhrx7FQ+5R1LiQdUA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
-    <link rel="stylesheet" href="<?= \app\core\Application::config('asset_url')?>css/site.css">
+    <link rel="stylesheet" href="../../css/selectize.bootstrap5.css">
+<!--    <link rel="stylesheet" href="../../css/selectize.css">-->
+    <link rel="stylesheet" href="../../css/site.css">
 
     <!--   custom style-->
     <title>Mobile Shop</title>
@@ -29,58 +34,15 @@
 <body>
 
 <!--start header-->
-<?php include_once __DIR__.'/../partials/_header.php' ?>
+<?php include_once __DIR__ . '/../partials/_header.php' ?>
 <!--end header-->
 
 <!--start main-->
-<main>
+<main class="container">
     <?php \app\core\session\Session::flash(); ?>
     {{content}}
 </main>
 <!--end main-->
-
-<!--start footer-->
-<footer class="p-4 bg-dark text-light mt-5">
-    <div class="footer row ">
-        <div class="col-3">
-            <h4> Mobile Shop</h4>
-            <p class="text-muted"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus, deserunt.</p>
-        </div>
-        <div class="col-3">
-            <h4> Newslatter</h4>
-            <form action="" class="row">
-                <div class="col-8 p-1">
-                    <input type="text" class="form-control form-control-sm">
-                </div>
-                <div class="col-3 p-1">
-                    <button type="submit" class="btn btn-primary btn-sm">Submit</button>
-                </div>
-            </form>
-        </div>
-        <div class="col-3">
-            <h4 class="font-rubik font-size-20">Information</h4>
-            <div class="d-flex flex-column flex-wrap">
-                <a href="#" class="font-rale font-size-14 text-white-50 pb-1">About Us</a>
-                <a href="#" class="font-rale font-size-14 text-white-50 pb-1">Delivery Information</a>
-                <a href="#" class="font-rale font-size-14 text-white-50 pb-1">Privacy Policy</a>
-                <a href="#" class="font-rale font-size-14 text-white-50 pb-1">Terms &amp; Conditions</a>
-            </div>
-        </div>
-        <div class="col-3">
-            <h4 class="font-rubik font-size-20">Account</h4>
-            <div class="d-flex flex-column flex-wrap">
-                <a href="#" class="font-rale font-size-14 text-white-50 pb-1">My Account</a>
-                <a href="#" class="font-rale font-size-14 text-white-50 pb-1">Order History</a>
-                <a href="#" class="font-rale font-size-14 text-white-50 pb-1">Wish List</a>
-                <a href="#" class="font-rale font-size-14 text-white-50 pb-1">Newslatters</a>
-            </div>
-        </div>
-    </div>
-    <div class="text-center text-muted pb-2 pt-5">
-        © Copyrights 2022. Designed By <a class="mail:nawlomuhammadit@gmail.com">Muhammad Nawlo</a>
-    </div>
-</footer>
-<!--end footer-->
 
 <!--jquery -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -96,7 +58,14 @@
 
 <!--isotope-->
 <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js"
+></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"
+        integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="../../js/selectize.min.js"></script>
-<script src="<?= \app\core\Application::config('asset_url')?>js/site.js"></script>
+<script src="../../js/site.js"></script>
+
+
 </body>
 </html>
